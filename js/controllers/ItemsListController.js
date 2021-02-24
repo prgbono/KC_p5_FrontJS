@@ -1,24 +1,27 @@
-import itemsService from './../services/ItemsService.js'
+import itemsService from './../services/ItemsService.js';
+import { itemView } from './../views/itemView.js';
+import BaseController from './BaseController.js';
 
-export default class ItemsListController {
-
-  // constructor(element) {
-  //   this.element = element;
-  //   // this.pubSub = pubSub;
-  //   // this.events = {
-  //   //     START_LOADING: 'startLoading',
-  //   //     FINISH_LOADING: 'finishLoading',
-  //   //     ERROR: 'error'
-  //   // };
-  // }
+export default class ItemsListController extends BaseController{
 
   render(items) {
+    this.element.innerHTML = '';
+    
+    for (const item of items) {
+      const article = document.createElement('article');
+      // console.log('itemView(item): ', itemView(item));
+      // article.innerHTML = '<div>THIS IS Ana rtivle</div>'
 
+      // NO HACe BIEN ESTO!!!
+      article.innerHTML = itemView(item);
+      
+      // TODO: canBeDeleted staff
+      
+      this.element.appendChild(article);
+    }
   }
 
   async loadItems(){
-    console.log('loadItems');
-    
     //TODO: publish
     try {
       const items = await itemsService.getItems();
@@ -28,9 +31,6 @@ export default class ItemsListController {
       console.error('Catch error: ', error);
       // TODO: publish error
     } 
-
-
-
     // finally{
     //   //TODO: publish 
     // }

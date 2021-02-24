@@ -4,8 +4,7 @@
   "description": "NodePop frontEnd website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "liveserver": "live-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/prgbono/KC_p5_FrontJS/issues"
   },
-  "homepage": "https://github.com/prgbono/KC_p5_FrontJS#readme",
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+  "homepage": "https://github.com/prgbono/KC_p5_FrontJS#readme"
 }

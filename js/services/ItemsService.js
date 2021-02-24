@@ -10,11 +10,27 @@ export default {
     //TODO: parámetro expand en la url...
     const url = `${BASE_URL}/items`;
     const response = await fetch(url);
-    console.log(`🚀  FRG 🚀 ~ file: ItemsService.js ~ line 13 ~ getItems:function ~ response`, response);
 
     // https://developer.mozilla.org/es/docs/Web/API/Response/ok
     if (response.ok) {
-      // Map items properties
+      // items properties mapping
+      const items = await response.json();
+      console.log(`🚀  FRG 🚀 ~ file: ItemsService.js ~ line 18 ~ getItems:function ~ items`, items);
+      return items.map(item => {
+        // const user = item.user || {};
+        return {
+          // TODO: Evitar las posibles inyecciones de código -> replace(/(<([^>]+)>)/gi, ""),
+          id: item.id,
+          name: item.name.replace(/(<([^>]+)>)/gi, ""),
+          description: item.description.replace(/(<([^>]+)>)/gi, ""),
+          isType: item.isType || null,
+          price: item.price || '??',
+          image: item.image || null,
+          // tags: item.tags,
+          date: item.createdAt,
+          // canBeDeleted;
+        }
+      });
     }
     else {
       throw new Error(`HTTP Error: ${response.status}`)
