@@ -8,16 +8,11 @@ export default class ItemsListController extends BaseController{
     this.element.innerHTML = '';
     
     for (const item of items) {
-      const article = document.createElement('article');
-      // console.log('itemView(item): ', itemView(item));
-      // article.innerHTML = '<div>THIS IS Ana rtivle</div>'
-
-      // NO HACe BIEN ESTO!!!
-      article.innerHTML = itemView(item);
-      
+      const itemElement = document.createElement('section');
+      itemElement.classList.add('column', 'is-one-third')
+      itemElement.innerHTML = itemView(item);
       // TODO: canBeDeleted staff
-      
-      this.element.appendChild(article);
+      this.element.appendChild(itemElement);
     }
   }
 
