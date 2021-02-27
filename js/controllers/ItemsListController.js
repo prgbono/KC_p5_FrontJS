@@ -5,7 +5,9 @@ export default class ItemsListController extends BaseController{
   
   constructor(element){
     super(element);
-    
+
+    //TODO: subscribe SEARCH
+    //TODO: subscribe ITEM_DELETED
   }
 
   render(items) {
@@ -23,8 +25,12 @@ export default class ItemsListController extends BaseController{
     this.publish(this.events.START_LOADING, {});
     try {
       const items = await itemsService.getItems();
-      this.render(items);
+      
+      !!items.length 
+        ? this.render(items)
+        : this.publish(this.events.THERE_IS_NO_ITEMS, {})
     } 
+
     catch (error) {
       this.publish(this.events.ERROR, error);
     } 

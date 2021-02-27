@@ -9,6 +9,7 @@ export default class BaseController {
         FINISH_LOADING: 'finishLoading',
         ERROR: 'error',
         CLICK: 'click',
+        THERE_IS_NO_ITEMS: 'noItemsInTheDB',
     //     SEARCH: 'search',
     //     TWEET_DELETED: 'tweetDeleted'
     };
