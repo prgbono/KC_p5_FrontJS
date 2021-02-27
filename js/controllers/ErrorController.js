@@ -14,6 +14,11 @@ export default class ErrorController extends BaseController {
   showError(error){    
     this.me.innerHTML = errorView(error);
     this.me.classList.remove('hidden');
-    // TODO: Gestión del clicl una vez mostrado el error
+    this.me.addEventListener(this.events.CLICK, (event) => {
+      // Remove Error pop up if click out or if click on 'X'
+      if (event.target == this.me || event.target.classList.contains('delete')) {
+        this.me.classList.add('hidden');
+      }
+    })
   }
 }
