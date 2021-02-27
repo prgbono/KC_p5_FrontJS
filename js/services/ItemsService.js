@@ -1,5 +1,6 @@
-const BASE_URL = 'http://127.0.0.1:8000/api';
+import { GLOBALS } from './../utils/globals.js'
 //TODO: TOKEN_KEY
+
 
 //FIXME: NO USAR ARROW F(x)s EN LOS SERVICIOS
 
@@ -8,7 +9,7 @@ export default {
     //TODO: Gestión del token...
 
     //TODO: parámetro expand en la url...
-    const url = `${BASE_URL}/items`;
+    const url = GLOBALS.BASE_URL_API_ITEMS;
     const response = await fetch(url);
 
     // https://developer.mozilla.org/es/docs/Web/API/Response/ok

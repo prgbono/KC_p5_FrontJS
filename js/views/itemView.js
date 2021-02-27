@@ -1,20 +1,16 @@
+import { GLOBALS } from './../utils/globals.js'
 export const itemView = (item) => {  
+  
   // TODO: remove description and beauty the date
   return `<div class="card">
     <div class="card-image">
       <figure class="image is-4by3">
         <!-- FIXME: image -->
-        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="${item.name}">
+        <img src=${GLOBALS.BASE_URL}${item.image} alt=${item.name}>
       </figure>
     </div>
     <div class="card-content">
       <div class="media">
-        <!-- FIXME: what's this content? -->
-        <!-- <div class="media-left">
-          <figure class="image is-48x48">
-            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-          </figure>
-        </div> -->
         <div class="media-content">
           <p class="title is-4">${item.name}</p>
         </div>
