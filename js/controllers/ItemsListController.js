@@ -1,23 +1,26 @@
+import BaseController from './BaseController.js';
 import itemsService from './../services/ItemsService.js';
 import { itemView } from './../views/itemView.js';
-import BaseController from './BaseController.js';
-
 export default class ItemsListController extends BaseController{
+  
+  constructor(element){
+    super(element);
+    
+  }
 
   render(items) {
-    this.element.innerHTML = '';
-    
+    this.me.innerHTML = '';
     for (const item of items) {
       const itemElement = document.createElement('section');
       itemElement.classList.add('column', 'is-one-third')
       itemElement.innerHTML = itemView(item);
       // TODO: canBeDeleted staff
-      this.element.appendChild(itemElement);
+      this.me.appendChild(itemElement);
     }
   }
 
   async loadItems(){
-    //TODO: publish
+    this.publish(this.events.START_LOADING, {});
     try {
       const items = await itemsService.getItems();
       this.render(items);
@@ -26,8 +29,8 @@ export default class ItemsListController extends BaseController{
       console.error('Catch error: ', error);
       // TODO: publish error
     } 
-    // finally{
-    //   //TODO: publish 
-    // }
+    finally{
+      this.publish(this.events.FINISH_LOADING, {})
+    }
   }
 }

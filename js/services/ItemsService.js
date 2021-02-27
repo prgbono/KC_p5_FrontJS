@@ -15,7 +15,6 @@ export default {
     if (response.ok) {
       // items properties mapping
       const items = await response.json();
-      console.log(`🚀  FRG 🚀 ~ file: ItemsService.js ~ line 18 ~ getItems:function ~ items`, items);
       return items.map(item => {
         // const user = item.user || {};
         return {
