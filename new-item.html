@@ -20,43 +20,25 @@
               <div class="field">
                 <label class="label">Artículo</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="qué quiero vender...">
+                  <input class="input" id="name" name="name" type="text" placeholder="qué quiero vender/buscar..." required>
                 </div>
               </div>
 
-              <!--USERNAME <div class="field">
-                <label class="label">Username</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                  </span>
-                </div>
-                <p class="help is-success">This username is available</p>
-              </div> -->
-
-              <!--EMAIL <div class="field">
-                <label class="label">Email</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </span>
-                </div>
-                <p class="help is-danger">This email is invalid</p>
-              </div> -->
-
               <div class="field">
-                <label class="label">Description</label>
+                <label class="label">Descripción</label>
                 <div class="control">
-                  <textarea class="textarea" placeholder="Si no quito esta cinta de correr del salón me mata...."></textarea>
+                  <textarea 
+                    name="description" class="textarea" 
+                    placeholder="Si no quito/pongo esta cinta de correr del salón mi mujer me mata...">
+                  </textarea>
                 </div>
+              </div>
+
+              <div class="select">
+                <select name="isType" required>
+                  <option value="vende" selected>Vendo</option>
+                  <option value="busca">Busco</option>
+                </select>
               </div>
 
               <!-- TODO: Tratar la subida de varias imágenes. También el UI del detalle del item con varias imágenes. -->
@@ -70,7 +52,7 @@
               <div class="field">
                 <label class="label">Precio</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="€€€">
+                  <input class="input" type="number" id="price" name="price" placeholder="€€€" required>
                 </div>
               </div>
 
@@ -78,7 +60,7 @@
 
               <div class="field is-grouped">
                 <div class="control">
-                  <button class="button is-link">Publicar</button>
+                  <button id="submit-button" class="button is-link" disabled>Publicar</button>
                 </div>
                 <div class="control">
                   <button class="button is-link is-light">Cancelar</button>

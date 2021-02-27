@@ -10,6 +10,7 @@ export default class BaseController {
         ERROR: 'error',
         CLICK: 'click',
         THERE_IS_NO_ITEMS: 'noItemsInTheDB',
+        PUBLISH_NEW_ITEM: 'submit'
     //     SEARCH: 'search',
     //     TWEET_DELETED: 'tweetDeleted'
     };
