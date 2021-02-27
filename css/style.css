@@ -6,8 +6,7 @@
 }
 
 /* Spinner */
-/* .spinner-loader, .global-errors { */
-.spinner-loader {
+.spinner-loader, .global-errors {
   display: block;
   position: fixed;
   z-index: 1;
@@ -54,5 +53,10 @@
 
 /* Cards */
 .card { margin: 20px auto; }
+
+/* Global errors */
+.global-errors {
+  padding: 20% 10%;
+}
 
 

@@ -1,5 +1,6 @@
 import ItemsController from './controllers/ItemsListController.js';
 import SpinnerController from './controllers/SpinnerController.js';
+import ErrorController from './controllers/ErrorController.js';
 
 // TODO: Pasar los nombres de los eventos a variables globales
 
@@ -10,4 +11,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
   const element = document.querySelector('.items-list');
   const itemsController = new ItemsController(element);
   itemsController.loadItems();
+
+  const errorElement = document.querySelector('.global-errors');
+  const errorController = new ErrorController(errorElement);
 })    

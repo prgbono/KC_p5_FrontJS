@@ -26,8 +26,7 @@ export default class ItemsListController extends BaseController{
       this.render(items);
     } 
     catch (error) {
-      console.error('Catch error: ', error);
-      // TODO: publish error
+      this.publish(this.events.ERROR, error);
     } 
     finally{
       this.publish(this.events.FINISH_LOADING, {})
