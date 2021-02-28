@@ -10,7 +10,8 @@ export default class BaseController {
         ERROR: 'error',
         CLICK: 'click',
         THERE_IS_NO_ITEMS: 'noItemsInTheDB',
-        PUBLISH_NEW_ITEM: 'submit'
+        PUBLISH_NEW_ITEM: 'submit',
+        DO_LOGIN: 'submit',
     //     SEARCH: 'search',
     //     TWEET_DELETED: 'tweetDeleted'
     };

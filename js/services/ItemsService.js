@@ -65,7 +65,6 @@ export default {
   },
 
   uploadImage: async function(image) {
-    debugger;
     const form = new FormData();
     form.append('file', image);
     const url = GLOBALS.BASE_URL_UPLOAD;
