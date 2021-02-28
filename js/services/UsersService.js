@@ -5,17 +5,13 @@ import api from './api.js';
 
 export default {
   login: async function(user){
-    console.log(`🚀  FRG 🚀 ~ file: UsersService.js ~ line 5 ~ login:function ~ user`, user);
     const url = GLOBALS.BASE_URL_LOGIN_USER;
-    debugger;
     //TODO: usar el refactorizado de request para pasar el method por parámetro???
     return await api.post(url, user);
   },
 
   saveToken: async function(token) {
-    console.log(`🚀  FRG 🚀 ~ file: UsersService.js ~ line 11 ~ saveToken:function ~ token`, token);
-    debugger;
-    localStorage.setItem(GLOBAL.TOKEN_KEY, token);
+    localStorage.setItem(GLOBALS.TOKEN_KEY, token);
   },
 
   getToken: async function() {

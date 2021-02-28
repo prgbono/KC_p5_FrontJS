@@ -41,9 +41,8 @@ export default class LoginFormController extends BaseController {
       this.publish(this.events.START_LOADING, {});
       
       try {
-        debugger;
         const data = await usersService.login(user);
-        dataService.saveToken(data.accessToken);
+        usersService.saveToken(data.accessToken);
         // TODO: mejorar el control de los query params
         // let next = '/';
         // const queryParams = window.location.search.replace('?', '');  
