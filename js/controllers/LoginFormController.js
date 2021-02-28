@@ -47,7 +47,6 @@ export default class LoginFormController extends BaseController {
         //Once logged in, drive the user to items list.
         let next = '/';
         const queryParams = window.location.search.replace('?', '');  
-        debugger;
         const queryParamsParts = queryParams.split('=');
         if (queryParamsParts.length >= 2 && queryParamsParts[0] === 'next') {
           next = queryParamsParts[1];

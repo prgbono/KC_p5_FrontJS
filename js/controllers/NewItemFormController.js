@@ -57,7 +57,9 @@ export default class NewItemFormController extends BaseController {
       this.publish(this.events.START_LOADING, {});
       try {
         await ItemsService.postItem(item);
-        //TODO redirección '/?item=itemOK ???'
+        //TODO: Notify the user item created successfully
+        // TODO: Clean form fields
+        window.location.href = '/';
       } 
       catch (error) {  
         this.publish(this.events.ERROR, error)

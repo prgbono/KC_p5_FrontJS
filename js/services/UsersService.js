@@ -16,7 +16,6 @@ export default {
 
   getToken: async function() {
     console.log('UsersService - getToken');
-    debugger;
     return localStorage.getItem(GLOBALS.TOKEN_KEY)
   },
 
@@ -27,14 +26,11 @@ export default {
   },
 
   isUserLogged: async function() {
-    console.log('UsersService - isUserlogged');
-    debugger;
     return await this.getToken() !== null;
   },
 
   getUser: async function() {
     console.log('UsersService - getUser');
-    debugger;
     try {
         const token = await this.getToken();
         const tokenParts = token.split('.');
@@ -43,11 +39,9 @@ export default {
         }
         const payload = tokenParts[1]; // Token payload is base64 encoded
         const jsonStr = atob(payload); // Decode base64
-        debugger; //see what's in jsonStr
         const { userId, username } = JSON.parse(jsonStr); 
         return { userId, username };
     } catch (error) {
-        //TODO: PubSub ErrorControler?? 
         return null;
     }
   },

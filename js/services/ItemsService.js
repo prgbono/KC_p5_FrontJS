@@ -1,20 +1,15 @@
 import { GLOBALS } from './../utils/globals.js'
-import api from './api.js'
-//TODO: TOKEN_KEY
-
-
-//FIXME: NO USAR ARROW F(x)s EN LOS SERVICIOS
+import api from './api.js';
+import usersService from './UsersService.js';
 
 export default {
   getItems: async function() {
-    //TODO: Gestión del token...
-
-    //TODO: parámetro expand en la url...
+    const currentUser = await usersService.getUser();
+    //TODO: Paginate and sort.
     const url = GLOBALS.BASE_URL_API_ITEMS;
     //TODO: Refactor - Carry GET verb to api.js
     const response = await fetch(url);
 
-    // https://developer.mozilla.org/es/docs/Web/API/Response/ok
     if (response.ok) {
       // items properties mapping
       const items = await response.json();
@@ -44,8 +39,6 @@ export default {
     if (item.image) {
       const imageURL = await api.uploadImage(item.image);
       item.image = imageURL;
-      console.log(`🚀  FRG 🚀 ~ file: ItemsService.js ~ line 54 ~ postItem:function ~ imageURL`, imageURL);
-      debugger;
     }
     return await api.post(url, item);
   },

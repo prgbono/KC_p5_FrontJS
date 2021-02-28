@@ -1,4 +1,5 @@
 import { GLOBALS } from '../utils/globals.js'
+import UsersService from './UsersService.js';
 
 //FIXME: NO USAR ARROW F(x)s EN LOS SERVICIOS
 
@@ -16,10 +17,10 @@ export default{
     } else {
       config.body = postData;
     }
-    // const token = await this.getToken();
-    // if (token) {
-    //   config.headers['Authorization'] = `Bearer ${token}`;
-    // }
+    const token = await UsersService.getToken();
+    if (token) {
+      config.headers['Authorization'] = `Bearer ${token}`;
+    }
     const response = await fetch(url, config);
     const data = await response.json(); //Fetch, doble promesa??
     if (response.ok) {
@@ -36,8 +37,6 @@ export default{
     form.append('file', image);
     const url = GLOBALS.BASE_URL_UPLOAD;
     const response = await this.post(url, form, false);
-    console.log('Response from /upload: ', response);
-    debugger;
     return response.path || null;
   },
 
