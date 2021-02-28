@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NodePop Register</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <div class="spinner-loader hidden"><div></div><div></div><div></div><div></div></div>
+    <div class="global-errors hidden"></div>
+
+    <main class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <form novalidate>
+              <div class="field">
+                <label class="label">Email</label>
+                <p class="control has-icons-left has-icons-right">
+                  <input name="email" class="input" type="email" placeholder="Email" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div class="field">
+                <label class="label">Password</label>
+                <p class="control has-icons-left">
+                  <input name="pass" class="input" type="password" placeholder="Password" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div class="field">
+                <label class="label">Confirm Password</label>
+                <p class="control has-icons-left">
+                  <input name="pass-confirm" class="input" type="password" placeholder="Repeat password" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button class="button is-link" disabled>Register</button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+    </main>
+    <script type="module" src="js/register.js"></script>
+  </body>
+</html>

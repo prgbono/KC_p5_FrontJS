@@ -22,8 +22,6 @@ export default {
 
   registerUser: async function(user) {
     const url = GLOBALS.BASE_URL_REGISTER_USER;
-    console.log(`🚀  FRG 🚀 ~ file: UsersService.js ~ line 5 ~ registerUser:function ~ user`, user);
-    debugger;
     //TODO: usar el refactorizado de request para pasar el method por parámetro???
     return await api.post(url, user);
   },

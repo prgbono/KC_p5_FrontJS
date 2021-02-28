@@ -12,6 +12,7 @@ export default class BaseController {
         THERE_IS_NO_ITEMS: 'noItemsInTheDB',
         PUBLISH_NEW_ITEM: 'submit',
         DO_LOGIN: 'submit',
+        DO_REGISTER: 'submit',
     //     SEARCH: 'search',
     //     TWEET_DELETED: 'tweetDeleted'
     };
