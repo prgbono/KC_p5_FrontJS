@@ -1,4 +1,5 @@
 import { GLOBALS } from './../utils/globals.js'
+import api from './api.js'
 //TODO: TOKEN_KEY
 
 
@@ -10,6 +11,7 @@ export default {
 
     //TODO: parámetro expand en la url...
     const url = GLOBALS.BASE_URL_API_ITEMS;
+    //TODO: Refactor - Carry GET verb to api.js
     const response = await fetch(url);
 
     // https://developer.mozilla.org/es/docs/Web/API/Response/ok
@@ -35,58 +37,22 @@ export default {
     else {
       throw new Error(`HTTP Error: ${response.status}`)
     }
-  },
-
-  request: async function(method, url, postData, json=true) {
-    const config = {
-      method: method,
-      headers: {},
-      body: null
-    };
-    if (json) {
-      config.headers['Content-Type'] = 'application/json';
-      config.body = JSON.stringify(postData);  
-    } else {
-      config.body = postData;
-    }
-    // const token = await this.getToken();
-    // if (token) {
-    //   config.headers['Authorization'] = `Bearer ${token}`;
-    // }
-    const response = await fetch(url, config);
-    const data = await response.json(); //Fetch, doble promesa??
-    if (response.ok) {
-        return data;
-    } else {            
-        // TODO: mejorar gestión de errores
-        // TODO: si la respuesta es un 401 no autorizado, debemos borrar el token (si es que lo tenemos);
-        throw new Error(data.message || JSON.stringify(data));
-    }
-  },
-
-  uploadImage: async function(image) {
-    const form = new FormData();
-    form.append('file', image);
-    const url = GLOBALS.BASE_URL_UPLOAD;
-    const response = await this.post(url, form, false);
-    console.log('Response from /upload: ', response);
-    debugger;
-    return response.path || null;
-  },
+  },  
 
   postItem: async function(item){
     const url = GLOBALS.BASE_URL_API_ITEMS;
     if (item.image) {
-      const imageURL = await this.uploadImage(item.image);
+      const imageURL = await api.uploadImage(item.image);
       item.image = imageURL;
       console.log(`🚀  FRG 🚀 ~ file: ItemsService.js ~ line 54 ~ postItem:function ~ imageURL`, imageURL);
       debugger;
     }
-    return await this.post(url, item);
+    return await api.post(url, item);
   },
 
-  post: async function(url, postData, json=true) {
-    return await this.request('POST', url, postData, json);
-  },
+  deleteItem: async function(item) {
+    const url = `${GLOBAL.BASE_URL_API_ITEMS}/${item.id}`;
+    return await api.delete(url);
+  }
   
 }

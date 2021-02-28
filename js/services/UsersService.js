@@ -1,4 +1,7 @@
-import { GLOBALS } from './../utils/globals.js'
+import { GLOBALS } from './../utils/globals.js';
+import api from './api.js';
+
+//FIXME: NO USAR ARROW F(x)s EN LOS SERVICIOS
 
 export default {
   login: async function(user){
@@ -6,7 +9,7 @@ export default {
     const url = GLOBALS.BASE_URL_LOGIN_USER;
     debugger;
     //TODO: usar el refactorizado de request para pasar el method por parámetro???
-    return await this.post(url, user);
+    return await api.post(url, user);
   },
 
   saveToken: async function(token) {
@@ -26,7 +29,7 @@ export default {
     console.log(`🚀  FRG 🚀 ~ file: UsersService.js ~ line 5 ~ registerUser:function ~ user`, user);
     debugger;
     //TODO: usar el refactorizado de request para pasar el method por parámetro???
-    return await this.post(url, user);
+    return await api.post(url, user);
   },
 
   isUserLogged: async function() {
