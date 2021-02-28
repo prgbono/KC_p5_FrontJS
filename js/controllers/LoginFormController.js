@@ -43,14 +43,16 @@ export default class LoginFormController extends BaseController {
       try {
         const data = await usersService.login(user);
         usersService.saveToken(data.accessToken);
-        // TODO: mejorar el control de los query params
-        // let next = '/';
-        // const queryParams = window.location.search.replace('?', '');  
-        // const queryParamsParts = queryParams.split('=');
-        // if (queryParamsParts.length >= 2 && queryParamsParts[0] === 'next') {
-        //   next = queryParamsParts[1];
-        // }
-        // window.location.href = next;
+
+        //Once logged in, drive the user to items list.
+        let next = '/';
+        const queryParams = window.location.search.replace('?', '');  
+        debugger;
+        const queryParamsParts = queryParams.split('=');
+        if (queryParamsParts.length >= 2 && queryParamsParts[0] === 'next') {
+          next = queryParamsParts[1];
+        }
+        window.location.href = next;
       } catch (error) {
         this.publish(this.events.ERROR, error);
       } finally {

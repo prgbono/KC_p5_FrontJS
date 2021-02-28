@@ -27,6 +27,7 @@ export default{
     } else {            
         // TODO: mejorar gestión de errores
         // TODO: si la respuesta es un 401 no autorizado, debemos borrar el token (si es que lo tenemos);
+        if (response.status === 401) localStorage.removeItem('token');
         throw new Error(data.message || JSON.stringify(data));
     }
   },

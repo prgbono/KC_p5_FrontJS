@@ -10,7 +10,7 @@ export default {
     return await api.post(url, user);
   },
 
-  saveToken: async function(token) {
+  saveToken: async function(token) {  
     localStorage.setItem(GLOBALS.TOKEN_KEY, token);
   },
 
