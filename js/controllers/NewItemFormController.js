@@ -44,7 +44,6 @@ export default class NewItemFormController extends BaseController {
   addListenerToSubmit(){
     this.me.addEventListener(this.events.PUBLISH_NEW_ITEM, async (event) => {
       event.preventDefault();
-      debugger;
       const item = {
         name: this.me.elements.name.value,
         description: this.me.elements.description.value,
@@ -54,7 +53,6 @@ export default class NewItemFormController extends BaseController {
           ? this.me.elements.file.files[0]
           : null
       }
-      debugger;
 
       this.publish(this.events.START_LOADING, {});
       try {
