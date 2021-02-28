@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NodePop New Item</title>
+    <title>NodePop Login</title>
     <link rel="stylesheet" href="css/style.css">
 
   </head>
@@ -15,21 +15,9 @@
       <div class="container">
         <div class="columns">
           <div class="column is-8 is-offset-2">
-            <form>
+            <form novalidate>
               <div class="field">
-                <label class="label">Username</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                  </span>
-                </div>
-                <p class="help is-success">This username is available</p>
-              </div>
-              <div class="field">
+                <label class="label">Email</label>
                 <p class="control has-icons-left has-icons-right">
                   <input class="input" type="email" placeholder="Email">
                   <span class="icon is-small is-left">
@@ -40,7 +28,9 @@
                   </span>
                 </p>
               </div>
+
               <div class="field">
+                <label class="label">Password</label>
                 <p class="control has-icons-left">
                   <input class="input" type="password" placeholder="Password">
                   <span class="icon is-small is-left">
@@ -50,15 +40,12 @@
               </div>
               <div class="field">
                 <p class="control">
-                  <button class="button is-success">
-                    Login
-                  </button>
+                  <button class="button is-link">Login</button>
                 </p>
               </div>
             </form>
           </div>
         </div>
-
     </main>
     <script type="module" src="js/login.js"></script>
   </body>
