@@ -8,3 +8,7 @@ export const GLOBALS = {
   BASE_URL_LOGIN_USER: 'http://127.0.0.1:8000/auth/login', 
   TOKEN_KEY: 'token',
 };
+
+export function capitalizeFirst(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}

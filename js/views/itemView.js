@@ -23,8 +23,8 @@ export const itemView = (item) => {
     </div>
     <footer class="card-footer">
       <!-- FIXME: links, where do they go? -->
-      <a href="#" class="card-footer-item">${item.isType}</a>
-      <a href="#" class="card-footer-item">${item.price}€</a>
+      <div class="card-footer-item">${item.isType}</div>
+      <div class="card-footer-item">${item.price}€</div>
     </footer>
   </div>`
 };

@@ -16,6 +16,10 @@ export default class ItemsListController extends BaseController{
       const itemElement = document.createElement('section');
       itemElement.classList.add('column', 'is-one-third')
       itemElement.innerHTML = itemView(item);
+      itemElement.querySelector('.card').addEventListener('click', (event) =>{
+          event.stopPropagation();
+          console.log('click en ITEM, e.target', event.target);
+        })
       // TODO: canBeDeleted staff
       this.me.appendChild(itemElement);
     }
@@ -25,12 +29,10 @@ export default class ItemsListController extends BaseController{
     this.publish(this.events.START_LOADING, {});
     try {
       const items = await itemsService.getItems();
-      
       !!items.length 
         ? this.render(items)
         : this.publish(this.events.THERE_IS_NO_ITEMS, {})
     } 
-
     catch (error) {
       this.publish(this.events.ERROR, error);
     } 

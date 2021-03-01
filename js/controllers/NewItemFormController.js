@@ -52,7 +52,6 @@ export default class NewItemFormController extends BaseController {
           ? this.me.elements.file.files[0]
           : null
       }
-
       this.publish(this.events.START_LOADING, {});
       try {
         await itemsService.postItem(item);
