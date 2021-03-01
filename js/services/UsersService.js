@@ -15,7 +15,6 @@ export default {
   },
 
   getToken: async function() {
-    console.log('UsersService - getToken');
     return localStorage.getItem(GLOBALS.TOKEN_KEY)
   },
 
@@ -30,7 +29,6 @@ export default {
   },
 
   getUser: async function() {
-    console.log('UsersService - getUser');
     try {
         const token = await this.getToken();
         const tokenParts = token.split('.');

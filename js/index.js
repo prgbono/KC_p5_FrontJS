@@ -2,8 +2,7 @@ import ItemsController from './controllers/ItemsListController.js';
 import SpinnerController from './controllers/SpinnerController.js';
 import ErrorController from './controllers/ErrorController.js';
 import NoItemsController from './controllers/NoItemsController.js';
-
-// TODO: Pasar los nombres de los eventos a variables globales
+import NewItemOrLoginButtonController from './controllers/NewItemOrLoginButtonController.js'
 
 window.addEventListener('DOMContentLoaded', async (event) => {
   const spinner = document.querySelector('.spinner-loader');
@@ -18,4 +17,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
   const noItemsElement = document.querySelector('.no-items');
   const noItemsController = new NoItemsController(noItemsElement);
+
+  const newItemOrLoginButtonElement = document.querySelector('.main-buttons');
+  const newItemOrLoginButtonController = new NewItemOrLoginButtonController(newItemOrLoginButtonElement);
 })    
