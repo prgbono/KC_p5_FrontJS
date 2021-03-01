@@ -1,15 +1,14 @@
-import ItemsService from '../services/ItemsService.js';
+import itemsService from '../services/ItemsService.js';
 import BaseController from './BaseController.js';
+import usersService from './../services/UsersService.js'
 
 export default class NewItemFormController extends BaseController {
   
   constructor(element) {
     super(element);
     this.attachEventListeners();
-
-    //TODO:  this.checkIfUserIsLogged();
-    //TODO:  this.focusInTextarea();
-    
+    this.checkIfUserIsLogged();
+    this.focusInName();
   }
 
   attachEventListeners(){
@@ -56,7 +55,7 @@ export default class NewItemFormController extends BaseController {
 
       this.publish(this.events.START_LOADING, {});
       try {
-        await ItemsService.postItem(item);
+        await itemsService.postItem(item);
         //TODO: Notify the user item created successfully
         // TODO: Clean form fields
         window.location.href = '/';
@@ -68,5 +67,19 @@ export default class NewItemFormController extends BaseController {
         this.publish(this.events.FINISH_LOADING)
       }
     })
+  }
+
+  async checkIfUserIsLogged() {
+    const userIsLogged = await usersService.isUserLogged();
+    if (!userIsLogged) {
+      window.location.href = '/login.html?next=/new-item.html';
+    } else {
+      this.publish(this.events.FINISH_LOADING);
+    }
+  }
+
+  focusInName() {
+    const nameInput = this.me.querySelector('#name');
+    nameInput.focus();
   }
 }
