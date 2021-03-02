@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
   const element = document.querySelector('.items-list');
   const itemsController = new ItemsController(element);
-  itemsController.loadItems();
+  itemsController.loadItems(); //TODO: Ask Kas why here and not in ItemsController.constructor?
 
   const errorElement = document.querySelector('.global-errors');
   const errorController = new ErrorController(errorElement);

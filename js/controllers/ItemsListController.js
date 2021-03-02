@@ -16,9 +16,9 @@ export default class ItemsListController extends BaseController{
       const itemElement = document.createElement('section');
       itemElement.classList.add('column', 'is-one-third')
       itemElement.innerHTML = itemView(item);
-      itemElement.querySelector('.card').addEventListener('click', (event) =>{
+      itemElement.querySelector('.card').addEventListener('click', event =>{
           event.stopPropagation();
-          console.log('click en ITEM, e.target', event.target);
+          window.location.href = `/item-detail.html?id=${item.id}`;          
         })
       // TODO: canBeDeleted staff
       this.me.appendChild(itemElement);
@@ -40,4 +40,5 @@ export default class ItemsListController extends BaseController{
       this.publish(this.events.FINISH_LOADING, {})
     }
   }
+
 }

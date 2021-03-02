@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NodePop Item</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <!-- <div class="spinner-loader"><div></div><div></div><div></div><div></div></div> -->
+    <div class="spinner-loader hidden"><div></div><div></div><div></div><div></div></div>
+    <div class="global-errors hidden"></div>
+
+    <main class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <form>
+              <div class="field">
+                <label class="label">Nombre TEST `${item.name}`</label>
+                <div class="control">
+                  <input class="input" id="name" name="name" type="text" placeholder="qué quiero vender/buscar..." required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Descripción</label>
+                <div class="control">
+                  <textarea 
+                    name="description" class="textarea" 
+                    placeholder="Si no quito/pongo esta cinta de correr del salón mi mujer me mata...">
+                  </textarea>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Vendo / Busco</label>
+                <div class="select">
+                  <select name="isType" required>
+                    <option value="Vende" selected>Vendo</option>
+                    <option value="Busca">Busco</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Imagen</label>
+                <div class="control">
+                  <input type="file" name="file" accept="image/*">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Precio</label>
+                <div class="control">
+                  <input class="input" type="number" id="price" name="price" placeholder="€€€" required>
+                </div>
+              </div>
+
+              <!-- //TODO: imagen -->
+
+              <div class="field is-grouped">
+                <div class="control">
+                  <button id="submit-button" class="button is-link" disabled>Editar</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light">Cancelar</button>
+                </div>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+
+    </main>
+    <script type="module" src="js/item-detail.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+        

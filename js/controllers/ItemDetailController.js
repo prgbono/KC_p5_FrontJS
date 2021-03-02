@@ -1,16 +1,34 @@
-import itemsService from '../services/ItemsService.js';
 import BaseController from './BaseController.js';
-import usersService from './../services/UsersService.js'
+import itemsService from '../services/ItemsService.js';
+// import usersService from '../services/UsersService.js'
 
-export default class NewItemFormController extends BaseController {
+export default class ItemDetailController extends BaseController {
   
   constructor(element) {
     super(element);
-    this.attachEventListeners();
-    this.checkIfUserIsLogged();
-    this.focusInName();
+    // this.attachEventListeners();
+    // this.checkIfUserIsLogged();
+    // this.focusInName();
+    const itemId = window.location.search.replace('?', '').split('=')[1];
+    this.loadItem(itemId);
   }
 
+  async loadItem(itemId){
+    this.publish(this.events.START_LOADING, {});
+    try {
+      const item = await itemsService.getItemById(itemId);
+      console.log('item retrieved: ', item);
+    } 
+    catch (error) {
+      this.publish(this.events.ERROR, error);
+    } 
+    finally{
+      this.publish(this.events.FINISH_LOADING, {})
+    }
+  }
+  
+
+  // TODO: ------------ check if all methods below are necessary here ------------
   attachEventListeners(){
     // Check validation form each time a required input is filled (isType is set by default)
     this.addListenerToName();
@@ -55,7 +73,7 @@ export default class NewItemFormController extends BaseController {
       this.publish(this.events.START_LOADING, {});
       try {
         await itemsService.postItem(item);
-        //TODO: Notify the user item created successfully or drive him to Home with his item published
+        //TODO: Notify the user item created successfully
         // TODO: Clean form fields
         window.location.href = '/';
       } 
