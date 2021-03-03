@@ -5,7 +5,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "isType": "Busca",
       "price": 350.15,
-      "image": "mobile.jpg",
+      "image": "http://127.0.0.1:8000//mobile.jpg",
       "createdAt": "2021-02-01T19:25:36.038Z",
       "id": 1
     },
@@ -15,7 +15,7 @@
       "description": "      ",
       "isType": "Vende",
       "price": "1499",
-      "image": "motorbike.jpg",
+      "image": "http://127.0.0.1:8000//motorbike.jpg",
       "date": "2021-02-02T19:25:41.153Z",
       "userId": 1,
       "updatedAt": "2021-03-03T11:56:15.375Z"
@@ -25,7 +25,7 @@
       "isType": "Busca",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 8,
-      "image": "agenda.jpg",
+      "image": "http://127.0.0.1:8000//agenda.jpg",
       "createdAt": "2021-02-03T19:25:41.153Z",
       "id": 3
     },
@@ -34,7 +34,7 @@
       "isType": "Vende",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 180,
-      "image": "desk.jpg",
+      "image": "http://127.0.0.1:8000//desk.jpg",
       "createdAt": "2021-02-04T19:25:41.153Z",
       "id": 4
     },
@@ -44,7 +44,7 @@
       "description": "      ",
       "isType": "Vende",
       "price": "120",
-      "image": "tv.jpg",
+      "image": "http://127.0.0.1:8000//tv.jpg",
       "date": "2021-02-04T19:25:41.153Z",
       "userId": 1,
       "updatedAt": "2021-03-03T11:52:30.077Z"
@@ -54,7 +54,7 @@
       "isType": "Vende",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 70,
-      "image": "bicycle.jpg",
+      "image": "http://127.0.0.1:8000//bicycle.jpg",
       "createdAt": "2021-02-06T19:25:41.153Z",
       "id": 6
     },
@@ -63,7 +63,7 @@
       "isType": "Vende",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 60,
-      "image": "padel.jpg",
+      "image": "http://127.0.0.1:8000//padel.jpg",
       "createdAt": "2021-02-07T19:25:41.153Z",
       "id": 7
     },

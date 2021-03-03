@@ -6,7 +6,7 @@ export const itemView = (item) => {
     <div class="card-image">
       <figure class="image is-4by3">
         <!-- FIXME: image -->
-        <img src=${GLOBALS.BASE_URL}${item.image} alt=${item.name}>
+        <img src=${item.image} alt=${item.name}>
       </figure>
     </div>
     <div class="card-content">
