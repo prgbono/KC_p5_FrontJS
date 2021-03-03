@@ -68,6 +68,11 @@ export default {
   deleteItem: async function(item) {
     const url = `${GLOBAL.BASE_URL_API_ITEMS}/${item.id}`;
     return await api.delete(url);
+  },
+
+  putItem: async function(item){
+    const url = `${GLOBALS.BASE_URL_API}items/${item.id}`;
+    return await api.put(url, item);
   }
   
 }

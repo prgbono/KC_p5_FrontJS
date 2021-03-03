@@ -13,6 +13,7 @@ export default class BaseController {
         PUBLISH_NEW_ITEM: 'submit',
         DO_LOGIN: 'submit',
         DO_REGISTER: 'submit',
+        SUBMIT: 'submit',
     //     SEARCH: 'search',
     //     TWEET_DELETED: 'tweetDeleted'
     };

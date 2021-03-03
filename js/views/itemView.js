@@ -15,6 +15,7 @@ export const itemView = (item) => {
           <p class="title is-4">${item.name}</p>
         </div>
       </div>
+      <!-- Fix this height or remove description field here -->
       <div class="content">
         ${item.description}
         <br>
@@ -22,7 +23,6 @@ export const itemView = (item) => {
       </div>
     </div>
     <footer class="card-footer">
-      <!-- FIXME: links, where do they go? -->
       <div class="card-footer-item">${item.isType}</div>
       <div class="card-footer-item">${item.price}€</div>
     </footer>
