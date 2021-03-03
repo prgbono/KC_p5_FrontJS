@@ -9,6 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const errorElement = document.querySelector('.global-errors');
   const errorController = new ErrorController(errorElement);
 
-  const itemDetail = document.querySelector('body');
+  const itemDetail = document.querySelector('form');
   const itemDetailController = new ItemDetailController(itemDetail);
 });

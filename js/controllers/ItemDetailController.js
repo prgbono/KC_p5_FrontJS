@@ -1,6 +1,6 @@
 import BaseController from './BaseController.js';
 import itemsService from '../services/ItemsService.js';
-// import usersService from '../services/UsersService.js'
+import { itemDetailView } from '../views/itemDetail.js';
 
 export default class ItemDetailController extends BaseController {
   
@@ -17,7 +17,7 @@ export default class ItemDetailController extends BaseController {
     this.publish(this.events.START_LOADING, {});
     try {
       const item = await itemsService.getItemById(itemId);
-      console.log('item retrieved: ', item);
+      this.render(item);
     } 
     catch (error) {
       this.publish(this.events.ERROR, error);
@@ -25,6 +25,10 @@ export default class ItemDetailController extends BaseController {
     finally{
       this.publish(this.events.FINISH_LOADING, {})
     }
+  }
+
+  render(item){
+    this.me.innerHTML = itemDetailView(item);
   }
   
 
