@@ -4,7 +4,7 @@ export const itemView = (item) => {
   // TODO: remove description and beauty the date
   return `<div class="card">
     <div class="card-image">
-      <figure class="image is-4by3">
+      <figure class="image">
         <!-- FIXME: image -->
         <img src=${item.image} alt=${item.name}>
       </figure>
