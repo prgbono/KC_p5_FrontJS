@@ -27,7 +27,12 @@ export default class ItemDetailController extends BaseController {
       this.focusInName();
     } 
     catch (error) {
-      this.publish(this.events.ERROR, error);
+      if (error.message.indexOf('404') >= 0) {
+        this.publish(this.events.THERE_IS_NO_ITEMS, error);
+      }
+      else{
+        this.publish(this.events.ERROR, error);
+      }
     } 
     finally{
       this.publish(this.events.FINISH_LOADING, {})
