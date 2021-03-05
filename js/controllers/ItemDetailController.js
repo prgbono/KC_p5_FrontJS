@@ -28,7 +28,7 @@ export default class ItemDetailController extends BaseController {
       this.focusInName();
 
       if (item.canBeDeleted){
-        new DeleteButtonController(this.me.querySelector('.is-danger'), item.id);
+        new DeleteButtonController(this.me.querySelector('.is-danger'), item);
       }
     } 
     catch (error) {

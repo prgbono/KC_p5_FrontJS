@@ -4,18 +4,17 @@ import BaseController from './BaseController.js';
 
 export default class DeleteButtonController extends BaseController{
 
-  constructor(element, itemId){
+  constructor(element, item){
     super(element);
     this.me.addEventListener(this.events.CLICK, async ev => {
       ev.preventDefault();
-      this.deleteItem(itemId);
+      this.deleteItem(item);
     })
   }
 
-  async deleteItem(itemId) {
-    await ItemsService.deleteItem(itemId);
+  async deleteItem(item) {
+    this.publish(this.events.REMOVE_ITEM, item);
+    // await ItemsService.deleteItem(itemId);
   }
-
-  
-  
+ 
 }

@@ -5,7 +5,7 @@ export const itemDetailView = (item) => {
     deleteButtonHtml = `<div>
       <button class="button is-danger">Eliminar</button>
     </div>`
-  }
+  };
 
   return `<div class="columns">
     <div class="column is-one-third">

@@ -14,8 +14,7 @@ export default class BaseController {
         DO_LOGIN: 'submit',
         DO_REGISTER: 'submit',
         SUBMIT: 'submit',
-    //     SEARCH: 'search',
-    //     TWEET_DELETED: 'tweetDeleted'
+        REMOVE_ITEM: 'clickInDeleteButton',
     };
   }
 
