@@ -1,4 +1,12 @@
 export const itemDetailView = (item) => {
+
+  let deleteButtonHtml='';
+  if (item.canBeDeleted) {
+    deleteButtonHtml = `<div class="control">
+      <button class="button is-danger">Eliminar</button>
+    </div>`
+  }
+
   return `<div class="columns">
     <div class="column is-one-third">
       <figure class="image">
@@ -47,6 +55,7 @@ export const itemDetailView = (item) => {
         <div class="control">
           <button class="button is-link is-light">Cancelar</button>
         </div>
+        ${deleteButtonHtml}
       </div>
 
     </div>

@@ -35,6 +35,7 @@ export default {
   }, 
   
   async getItemById(itemId) {
+    const currentUser = await usersService.getUser();
     const url = `${GLOBALS.BASE_URL_API}items/${itemId}`
     const response = await fetch(url);
     if (response.ok){
@@ -48,7 +49,7 @@ export default {
         image: item.image || null,
         // tags: item.tags,
         date: item.createdAt || item.updatedAt,
-        // canBeDeleted;
+        canBeDeleted: currentUser ?  currentUser.userId === item.userId : false
       }
     }
     else{
