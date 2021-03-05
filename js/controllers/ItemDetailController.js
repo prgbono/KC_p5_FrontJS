@@ -2,6 +2,7 @@ import BaseController from './BaseController.js';
 import itemsService from '../services/ItemsService.js';
 import { itemDetailView } from '../views/itemDetail.js';
 import usersService from '../services/UsersService.js';
+import DeleteButtonController from './../controllers/DeleteButtonController.js'
 
 export default class ItemDetailController extends BaseController {
   
@@ -25,6 +26,10 @@ export default class ItemDetailController extends BaseController {
       this.render(item);
       this.attachEventListeners(item);
       this.focusInName();
+
+      if (item.canBeDeleted){
+        new DeleteButtonController(this.me.querySelector('.is-danger'), item.id);
+      }
     } 
     catch (error) {
       if (error.message.indexOf('404') >= 0) {
@@ -115,4 +120,9 @@ export default class ItemDetailController extends BaseController {
     const nameInput = this.me.querySelector('#name');
     nameInput.focus();
   }
+
+  async deleteButton(itemId){
+    console.log('deleteButton from Controller itemId: ', itemId);
+  }
+
 }

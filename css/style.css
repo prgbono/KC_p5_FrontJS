@@ -71,3 +71,9 @@
   left: 70px;
   top: 20px;
 }
+
+/* Delete button */
+.is-right{
+  display: flex;
+  justify-content: flex-end;
+}

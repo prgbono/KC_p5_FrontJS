@@ -2,7 +2,7 @@ export const itemDetailView = (item) => {
 
   let deleteButtonHtml='';
   if (item.canBeDeleted) {
-    deleteButtonHtml = `<div class="control">
+    deleteButtonHtml = `<div>
       <button class="button is-danger">Eliminar</button>
     </div>`
   }
@@ -48,15 +48,22 @@ export const itemDetailView = (item) => {
         </div>
       </div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button id="submit-button" class="button is-link" disabled>Editar</button>
+      <div class="columns">
+        <div class="column is-left">
+          <div class="field is-grouped">
+            <div class="control">
+              <button id="submit-button" class="button is-link" disabled>Editar</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light">Cancelar</button>
+            </div>
+          </div>
         </div>
-        <div class="control">
-          <button class="button is-link is-light">Cancelar</button>
+        <div class="column is-right">
+          ${deleteButtonHtml}
         </div>
-        ${deleteButtonHtml}
       </div>
+      
 
     </div>
   </div>`
