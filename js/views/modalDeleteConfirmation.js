@@ -10,7 +10,7 @@ export const modalDeleteConfirmationView = (itemName) => {
       </section>
       <footer class="modal-card-foot">
         <button class="button is-danger">Yes, remove item</button>
-        <button class="button">Cancel</button>
+        <button class="button" id="cancel-button">Cancel</button>
       </footer>
     </div>`
 };

@@ -120,9 +120,4 @@ export default class ItemDetailController extends BaseController {
     const nameInput = this.me.querySelector('#name');
     nameInput.focus();
   }
-
-  async deleteButton(itemId){
-    console.log('deleteButton from Controller itemId: ', itemId);
-  }
-
 }

@@ -76,10 +76,9 @@ export default {
     return await api.put(url, item);
   },
 
-  deleteItem: async function(itemId){
-    console.log('deleteButton from itemService, itemId: ', itemId);
-    // const url = `${BASE_URL}/api/items/${itemId}`;
-    // return await api.delete(url); -->> Api
+  deleteItem: async function(item){
+    const url = `${GLOBALS.BASE_URL}api/items/${item.id}`;
+    return await api.delete(url); 
   }
   
 }

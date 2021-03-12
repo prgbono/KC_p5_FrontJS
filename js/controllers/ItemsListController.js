@@ -5,9 +5,6 @@ export default class ItemsListController extends BaseController{
   
   constructor(element){
     super(element);
-
-    //TODO: subscribe SEARCH
-    //TODO: subscribe ITEM_DELETED
   }
 
   render(items) {
@@ -17,9 +14,9 @@ export default class ItemsListController extends BaseController{
       itemElement.classList.add('column', 'is-one-third')
       itemElement.innerHTML = itemView(item);
       itemElement.querySelector('.card').addEventListener('click', event =>{
-          event.stopPropagation();
-          window.location.href = `/item-detail.html?id=${item.id}`;          
-        })
+        event.stopPropagation();
+        window.location.href = `/item-detail.html?id=${item.id}`;          
+      })
       // TODO: canBeDeleted staff
       this.me.appendChild(itemElement);
     }

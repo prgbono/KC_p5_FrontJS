@@ -1,4 +1,4 @@
-import { GLOBALS } from '../utils/globals.js'
+import { GLOBALS, isEmptyObject } from '../utils/globals.js'
 import UsersService from './UsersService.js';
 
 //FIXME: NO USAR ARROW F(x)s EN LOS SERVICIOS
@@ -28,7 +28,7 @@ export default{
     } else {            
         if (response.status === 401) localStorage.removeItem('token');
         if (response.status === 400) return data; //take the error till controller
-        throw new Error(data.message || JSON.stringify(data));
+        throw new Error(data.message || !isEmptyObject(data) ? JSON.stringify(data) : 'Error unhandled');
     }
   },
 
