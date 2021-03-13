@@ -37,7 +37,6 @@ export default class ModalDeleteConfirmationController extends BaseController{
     this.publish(this.events.START_LOADING, {});
     try {
       await itemsService.deleteItem(item);
-      this.closeModal();
       window.location.href = '/';
       //TODO: Notice the user
     } 
@@ -45,6 +44,7 @@ export default class ModalDeleteConfirmationController extends BaseController{
       this.publish(this.events.ERROR, error);
     } 
     finally{
+      this.closeModal();
       this.publish(this.events.FINISH_LOADING, {})
     }
     

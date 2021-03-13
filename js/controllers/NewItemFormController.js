@@ -56,7 +56,6 @@ export default class NewItemFormController extends BaseController {
       try {
         await itemsService.postItem(item);
         //TODO: Notify the user item created successfully or drive him to Home with his item published
-        // TODO: Clean form fields
         window.location.href = '/';
       } 
       catch (error) {  

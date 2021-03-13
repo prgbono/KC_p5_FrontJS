@@ -29,9 +29,3 @@ export const itemView = (item) => {
   </div>`
 };
 
-
-// export const itemView = (item) => {
-//   // TODO: deleteButton staff
-
-//   // TODO: image staff
-//   // console.log('item in the view: ', item);
