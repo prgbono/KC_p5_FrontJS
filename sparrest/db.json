@@ -12,7 +12,7 @@
     },
     {
       "name": "Auriculares",
-      "description": "Auriculares BT...                  ",
+      "description": "Auriculares BT...",
       "isType": "Vende",
       "price": "90",
       "image": "http://127.0.0.1:8000//file-1614592021490.jpg",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Mochila",
-      "description": "Mochila Nennn                  ",
+      "description": "Mochila Nennn",
       "isType": "Vende",
       "price": "70",
       "image": "http://127.0.0.1:8000//file-1614597019523.jpg",
@@ -32,13 +32,213 @@
     },
     {
       "name": "Runner shoes",
-      "description": "                  ",
+      "description": " ",
       "isType": "Busca",
       "price": "120",
       "image": "http://127.0.0.1:8000//file-1614600904211.jpg",
       "userId": 21,
       "updatedAt": "2021-03-01T12:15:04.225Z",
       "id": 13
+    },
+    {
+      "name": "Agenda",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "4",
+      "image": "http://127.0.0.1:8000//file-1615632753842.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:52:33.862Z",
+      "id": 14
+    },
+    {
+      "name": "Bicicleta",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "120",
+      "image": "http://127.0.0.1:8000//file-1615632798460.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:53:18.478Z",
+      "id": 15
+    },
+    {
+      "name": "Vestido",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "60",
+      "image": "http://127.0.0.1:8000//file-1615632838962.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:53:58.974Z",
+      "id": 16
+    },
+    {
+      "name": "Coche",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "60000",
+      "image": "http://127.0.0.1:8000//file-1615632878762.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:54:38.772Z",
+      "id": 17
+    },
+    {
+      "name": "Foto",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "8",
+      "image": "http://127.0.0.1:8000//file-1615632913158.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:55:13.166Z",
+      "id": 18
+    },
+    {
+      "name": "Brazo robótico",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "3200",
+      "image": "http://127.0.0.1:8000//file-1615632971941.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:56:11.949Z",
+      "id": 19
+    },
+    {
+      "name": "Teclado",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "40",
+      "image": "http://127.0.0.1:8000//file-1615632994547.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:56:34.559Z",
+      "id": 20
+    },
+    {
+      "name": "Ordenador portátil",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "900",
+      "image": "http://127.0.0.1:8000//file-1615633151295.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:59:11.307Z",
+      "id": 21
+    },
+    {
+      "name": "Lámpara",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "7",
+      "image": "http://127.0.0.1:8000//file-1615633174007.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:59:34.015Z",
+      "id": 22
+    },
+    {
+      "name": "Teléfono movil",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "650",
+      "image": "http://127.0.0.1:8000//file-1615633197975.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T10:59:57.985Z",
+      "id": 23
+    },
+    {
+      "name": "Moto",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "2100",
+      "image": "http://127.0.0.1:8000//file-1615633224970.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:00:24.980Z",
+      "id": 24
+    },
+    {
+      "name": "Motocicleta",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "1300",
+      "image": "http://127.0.0.1:8000//file-1615633242109.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:00:42.116Z",
+      "id": 25
+    },
+    {
+      "name": "Periódico",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "2",
+      "image": "http://127.0.0.1:8000//file-1615633265446.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:01:05.465Z",
+      "id": 26
+    },
+    {
+      "name": "Stickies",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "3",
+      "image": "http://127.0.0.1:8000//file-1615633286501.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:01:26.513Z",
+      "id": 27
+    },
+    {
+      "name": "Oculus",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "290",
+      "image": "http://127.0.0.1:8000//file-1615633309461.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:01:49.472Z",
+      "id": 28
+    },
+    {
+      "name": "Hucha",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "5",
+      "image": "http://127.0.0.1:8000//file-1615633325879.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:02:05.893Z",
+      "id": 29
+    },
+    {
+      "name": "Armario de Comunicaciones",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "210",
+      "image": "http://127.0.0.1:8000//file-1615633355496.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:02:35.505Z",
+      "id": 30
+    },
+    {
+      "name": "Cubo de Rubik",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "4",
+      "image": "http://127.0.0.1:8000//file-1615633373835.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:02:53.858Z",
+      "id": 31
+    },
+    {
+      "name": "Pantalón",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Vende",
+      "price": "45",
+      "image": "http://127.0.0.1:8000//file-1615633395719.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:03:15.729Z",
+      "id": 32
+    },
+    {
+      "name": "Van",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
+      "isType": "Busca",
+      "price": "8000",
+      "image": "http://127.0.0.1:8000//file-1615633415787.jpg",
+      "userId": 1,
+      "updatedAt": "2021-03-13T11:03:35.797Z",
+      "id": 33
     }
   ],
   "users": [
