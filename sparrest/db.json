@@ -1,37 +1,6 @@
 {
   "items": [
     {
-      "name": "Mobile phone",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
-      "isType": "Busca",
-      "price": 350.15,
-      "image": "http://127.0.0.1:8000//mobile.jpg",
-      "createdAt": "2021-02-01T19:25:36.038Z",
-      "id": 1,
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "name": "Moto",
-      "description": "      ",
-      "isType": "Vende",
-      "price": "1499",
-      "image": "http://127.0.0.1:8000//motorbike.jpg",
-      "date": "2021-02-02T19:25:41.153Z",
-      "userId": 1,
-      "updatedAt": "2021-03-03T11:56:15.375Z"
-    },
-    {
-      "name": "Agenda",
-      "isType": "Busca",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
-      "price": 8,
-      "image": "http://127.0.0.1:8000//agenda.jpg",
-      "createdAt": "2021-02-03T19:25:41.153Z",
-      "id": 3,
-      "userId": 1
-    },
-    {
       "name": "Mesa",
       "isType": "Vende",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
@@ -40,69 +9,6 @@
       "createdAt": "2021-02-04T19:25:41.153Z",
       "id": 4,
       "userId": 1
-    },
-    {
-      "id": 5,
-      "name": "TV",
-      "description": "      ",
-      "isType": "Vende",
-      "price": "120",
-      "image": "http://127.0.0.1:8000//tv.jpg",
-      "date": "2021-02-04T19:25:41.153Z",
-      "userId": 1,
-      "updatedAt": "2021-03-03T11:52:30.077Z"
-    },
-    {
-      "name": "Bicicleta",
-      "isType": "Vende",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
-      "price": 70,
-      "image": "http://127.0.0.1:8000//bicycle.jpg",
-      "createdAt": "2021-02-06T19:25:41.153Z",
-      "id": 6,
-      "userId": 1
-    },
-    {
-      "name": "Tabla de padel surf",
-      "isType": "Vende",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta malesuada ex, rutrum mattis velit hendrerit sed.",
-      "price": 60,
-      "image": "http://127.0.0.1:8000//padel.jpg",
-      "createdAt": "2021-02-07T19:25:41.153Z",
-      "id": 7,
-      "userId": 1
-    },
-    {
-      "name": "Raspberry Pi 2 Model B",
-      "description": "Cacharrito para juguetear                  ",
-      "isType": "Busca",
-      "price": "60",
-      "image": "http://127.0.0.1:8000//file-1614536259825.png",
-      "userId": 16,
-      "updatedAt": "2021-02-28T18:18:03.473Z",
-      "id": 8
-    },
-    {
-      "name": "Garmin TRX / VivoActive",
-      "description": "Pulsómetro de muñeca                  ",
-      "isType": "Busca",
-      "price": "260",
-      "image": "http://127.0.0.1:8000//file-1614538398000.jpg",
-      "userId": 16,
-      "updatedAt": "2021-02-28T18:53:23.337Z",
-      "id": 9
-    },
-    {
-      "id": 10,
-      "name": "Cubo de Rubik",
-      "description": "                                                                                                                        Cubo de Rubik                   \n           \n           \n           \n           \n           \n           \n           \n           \n           \n          ",
-      "isType": "Vende",
-      "price": "22",
-      "image": "http://127.0.0.1:8000//file-1614539248995.jpg",
-      "date": "2021-03-05T16:24:11.040Z",
-      "canBeDeleted": true,
-      "userId": 16,
-      "updatedAt": "2021-03-05T16:36:53.821Z"
     },
     {
       "name": "Auriculares",
