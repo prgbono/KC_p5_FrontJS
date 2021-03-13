@@ -44,7 +44,7 @@ export default class LoginFormController extends BaseController {
         const data = await usersService.login(user);
         usersService.saveToken(data.accessToken);
 
-        //Once logged in, drive the user to items list.
+        // Once logged in, drive the user to items list.
         let next = '/';
         const queryParams = window.location.search.replace('?', '');  
         const queryParamsParts = queryParams.split('=');

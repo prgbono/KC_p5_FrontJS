@@ -22,12 +22,12 @@ export default{
       config.headers['Authorization'] = `Bearer ${token}`;
     }
     const response = await fetch(url, config);
-    const data = await response.json(); //Fetch, doble promesa??
+    const data = await response.json(); 
     if (response.ok) {
         return data;
     } else {            
         if (response.status === 401) localStorage.removeItem('token');
-        if (response.status === 400) return data; //take the error till controller
+        if (response.status === 400) return data; 
         throw new Error(data.message || !isEmptyObject(data) ? JSON.stringify(data) : 'Error unhandled');
     }
   },

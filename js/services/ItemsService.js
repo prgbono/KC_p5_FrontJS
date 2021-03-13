@@ -7,16 +7,13 @@ export default {
     const currentUser = await usersService.getUser();
     //TODO: Paginate and sort.
     const url = GLOBALS.BASE_URL_API_ITEMS;
-    //TODO: Refactor - Carry GET verb to api.js
     const response = await fetch(url);
 
     if (response.ok) {
       // items properties mapping
       const items = await response.json();
       return items.map(item => {
-        // const user = item.user || {};
         return {
-          // TODO: Evitar las posibles inyecciones de código -> replace(/(<([^>]+)>)/gi, ""),
           id: item.id,
           name: item.name.replace(/(<([^>]+)>)/gi, ""),
           description: item.description.replace(/(<([^>]+)>)/gi, ""),

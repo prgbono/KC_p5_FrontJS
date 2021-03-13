@@ -4,7 +4,6 @@ import itemsService from '../services/ItemsService.js';
 
 export default class ModalDeleteConfirmationController extends BaseController{
   
-  //TODO: Pasar nombre artículo al modal constructor(element, itemName){
   constructor(element){
     super(element)
     this.subscribe(this.events.REMOVE_ITEM, (item) => {
@@ -38,7 +37,7 @@ export default class ModalDeleteConfirmationController extends BaseController{
     try {
       await itemsService.deleteItem(item);
       window.location.href = '/';
-      //TODO: Notice the user
+      //TODO: Notice the user about the deletion
     } 
     catch (error) {
       this.publish(this.events.ERROR, error);

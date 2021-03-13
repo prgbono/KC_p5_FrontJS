@@ -20,7 +20,6 @@ export default {
 
   registerUser: async function(user) {
     const url = GLOBALS.BASE_URL_REGISTER_USER;
-    //TODO: usar el refactorizado de request para pasar el method por parámetro???
     return await api.post(url, user);
   },
 

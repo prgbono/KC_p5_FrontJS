@@ -16,11 +16,6 @@ export default class ItemDetailController extends BaseController {
     this.publish(this.events.START_LOADING, {});
     try {
       // TODO: Warn the user when entering in item-detail in case is not logged in 
-      // const isUserLogged = await this.checkIfUserIsLogged();
-      // if (!isUserLogged) {
-      //   this.me.classList.remove('hidden');
-      // }
-      // else{}
 
       const item = await itemsService.getItemById(itemId);
       this.render(item);
@@ -49,14 +44,13 @@ export default class ItemDetailController extends BaseController {
   }
   
 
-// TODO: Carry this to utils  
+// TODO: Move to common folder utils some functions from here
   attachEventListeners(item){
     this.addListenerToName();
     this.addListenerToPrice();
     this.addListenerToSubmit(item);
   }
 
-  // TODO: Carry this to utils
   addListenerToName(){
     const name = this.me.querySelector('#name');
     name.addEventListener('keyup', () => {
@@ -64,7 +58,6 @@ export default class ItemDetailController extends BaseController {
     });
   }
   
-  // TODO: Carry this to utils
   addListenerToPrice(){
     const price = this.me.querySelector('#price');
     price.addEventListener('keyup', () => {

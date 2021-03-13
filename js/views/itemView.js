@@ -5,7 +5,6 @@ export const itemView = (item) => {
   return `<div class="card">
     <div class="card-image">
       <figure class="image">
-        <!-- FIXME: image -->
         <img src=${item.image} alt=${item.name}>
       </figure>
     </div>
