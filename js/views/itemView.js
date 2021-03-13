@@ -14,10 +14,10 @@ export const itemView = (item) => {
           <p class="title is-4">${item.name}</p>
         </div>
       </div>
-      <!-- Fix this height or remove description field here -->
       <div class="content">
         ${item.description}
         <br>
+        <!-- TODO: Format date -->
         <time datetime="2016-1-1">${item.date}</time>
       </div>
     </div>

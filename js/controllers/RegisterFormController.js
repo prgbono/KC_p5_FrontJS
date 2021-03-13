@@ -73,14 +73,20 @@ export default class LoginFormController extends BaseController {
   }
   
   async makePost (user) {
-    const response = await usersService.registerUser(user);
-    !response.message 
-      ? window.location.href = '/login.html'
-      : this.publish(this.events.ERROR, response.message);
-        
-    //TODO: Gestionar la creación del usuario. 
-    // LLevarlo por ejemplo al login con el username relleno.
-    // Notificar que el usuario ha sido creado con éxito.
+    try {
+      const response = await usersService.registerUser(user);
+      !response.message 
+        ? window.location.href = '/login.html'
+        : this.publish(this.events.ERROR, response.message);
+          
+      //TODO: Gestionar la creación del usuario. 
+      // LLevarlo por ejemplo al login con el username relleno.
+      // Notificar que el usuario ha sido creado con éxito.
+    } catch (error) {
+      this.publish(this.events.ERROR, error);
+    } finally {
+      this.publish(this.events.FINISH_LOADING);
+    }
     
   }
 
